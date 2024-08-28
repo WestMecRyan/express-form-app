@@ -14,3 +14,6 @@
 - run `npm init -y` in the terminal to initialize the project with a package.json file
 - copy the contents of packgae.final.json into the package.json file
 - run `npm i` to install all dependencies from the package.json file
+
+- modify the package script to access server/index.js from nodemon
+- open two terminals and run `npm run client` in one terminal and `npm run server` in another
