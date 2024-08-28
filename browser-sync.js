@@ -2,7 +2,7 @@ const browserSync = require('browser-sync').create();
 
 browserSync.init({
   proxy: 'localhost:3000',
-  files: ['client/**/*.*'],
+  files: ['client/**/*'],
   port: 3001,
   open: true, // We'll open the browser manually after both processes start
   notify: false
