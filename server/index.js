@@ -17,10 +17,24 @@ app.get('/', (req, res) => {
         .status(200)
         .send('It works!');
 });
+app.get('/', (req, res) => {
+    res
+    // sendFile sets the header content type based on the extension of the file name
+        .sendFile('index.html', { root: clientPath }, (err) => { // 3 params , endpoint, path, and arrow function pass an err
+            if (err) {
+                console.error('error sending file:', err);
+                res.status(500).send('error sending file');
+            } else {
+                res.status(200); // this is set by sendFile
+                res.set('Content-Type', 'text/html'); // this is set by sendfile
+                console.log('file sent successfully');
+            }
+        });
+});
 // then send the index.html file
 // use error handling to catch sendFile errors
 
-// get the '/about' endpoint and serve an about page
+// practice get the '/about' endpoint and serve an about page
 
 // cache a PORT to process.envPORT || 3000
 const PORT = process.env.PORT || 3000;
