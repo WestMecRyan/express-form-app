@@ -2,11 +2,11 @@
   "name": "express-form-server",
   "version": "1.0.0",
   "description": "Express server with live reload",
-  "main": "server.js",
+  "main": "server/index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js",
+    "start": "node server/index.js",
+    "server": "nodemon server/index.js",
     "client": "node browser-sync.js"
   },
   "keywords": [],

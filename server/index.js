@@ -4,8 +4,8 @@
 
 // cache the express module as 'app'
 
-// cache the client directory as 'publicPath' using path.join
-
+// cache the client directory as 'clientPath' using path.join
+const clientPath = path.join(__dirname, '..', 'client');
 // use the static middleware to serve the client folder
 
 // get the '/' endpoint
